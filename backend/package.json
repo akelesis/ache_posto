@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "ache posto backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akelesis/ache_posto.git"
+  },
+  "keywords": [
+    "backend",
+    "acheposto",
+    "gasstation",
+    "app"
+  ],
+  "author": "Marcus Tavares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akelesis/ache_posto/issues"
+  },
+  "homepage": "https://github.com/akelesis/ache_posto#readme"
+}
