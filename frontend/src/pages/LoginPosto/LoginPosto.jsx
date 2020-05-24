@@ -2,10 +2,10 @@ import React from 'react';
 
 // import { Container } from './styles';
 
-function Station() {
+function LoginPosto() {
     return (
-        <h1>Station</h1>
+        <h1>Login Posto</h1>
     );
 }
 
-export default Station;
+export default LoginPosto;
