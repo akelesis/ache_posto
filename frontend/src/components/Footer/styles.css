@@ -1,0 +1,17 @@
+.Footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0E131F;
+    color: white;
+    font-size: 20px;
+    width: 100vw;
+    height: 116px;
+}
+
+.Footer #logoMVtech{
+    position: relative;
+    top: 10px;
+    width: 105px;
+    height: 35.97px;
+}

@@ -1,10 +1,17 @@
 import React from 'react';
+import Header from './components/Header'
+import Footer from './components/Footer'
+
 import './App.css';
+
+import Routes from './routes'
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello Ache Posto!</h1>
+      <Header />
+      <Routes />
+      <Footer />
     </div>
   );
 }
