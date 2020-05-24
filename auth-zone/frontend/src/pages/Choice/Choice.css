@@ -65,6 +65,19 @@
   grid-template-areas: "gas shipping";
 }
 
+/* MEDIA QUERIES */
+
+@media (max-width: 700px) {
+  .choices {
+    height: 85vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "gas" "shipping";
+    font-size: 0.8rem;
+  }
+}
+
 /* ANIMATIONS */
 
 @keyframes onmouse-gas {
