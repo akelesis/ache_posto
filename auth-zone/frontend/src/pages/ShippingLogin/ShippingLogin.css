@@ -1,0 +1,166 @@
+.shipping-icon {
+  grid-area: shipping-icon;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e2f0f0;
+  height: 90vh;
+  font-family: Calibri, sans-serif;
+  font-size: 30px;
+  color: #2e294e;
+}
+
+.shipping-login-panel {
+  grid-area: shipping-login-panel;
+  height: 90vh;
+  background-color: #2e294e;
+}
+
+.shipping-login {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "shipping-icon shipping-login-panel";
+}
+
+.shipping-icon .logoAP {
+  width: 150px;
+}
+
+.shipping-icon .station-icon {
+  width: 400px;
+  margin-top: 50px;
+}
+
+.shipping-login-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.shipping-login-panel h1 {
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.login-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-input-group {
+  background-color: #e6e6e6;
+  width: 500px;
+  font-size: 25px;
+  height: 40px;
+  margin: 20px 0;
+  position: relative;
+  border-radius: 5px;
+}
+
+.login-input-group input {
+  border: none;
+  width: 490px;
+  font-size: 25px;
+  background-color: #e6e6e6;
+  outline: none;
+  padding-left: 5px;
+}
+
+.login-input-group input:valid {
+  color: #1b998b;
+}
+
+.login-input-group input:invalid {
+  color: orangered;
+}
+
+.login-input-group label {
+  position: absolute;
+  left: 5px;
+  color: #555;
+  transform-origin: 0%;
+  transition: 0.4s;
+}
+
+.login-input-group:focus-within label,
+.login-input-group input:not(:placeholder-shown) + label {
+  transform: scale(0.8) translateY(-3rem);
+  color: #fff;
+}
+
+.login-btn {
+  border: none;
+  border-radius: 5px;
+  width: 500px;
+  height: 40px;
+  background-color: #e19037;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #ce873c;
+  cursor: pointer;
+}
+
+.login-anchor {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.login-anchor:hover {
+  cursor: pointer;
+  color: #ccc;
+}
+
+.left-align {
+  align-self: flex-start;
+  margin: 0 0 50px 10px;
+}
+
+@media (max-width: 1060px) {
+  .login-input-group {
+    width: 300px;
+  }
+
+  .login-input-group input {
+    width: 290px;
+  }
+
+  .login-btn {
+    width: 300px;
+  }
+
+  .shipping-icon {
+    font-size: 1.3rem;
+  }
+
+  .shipping-icon .station-icon {
+    width: 300px;
+  }
+}
+
+@media (max-width: 700px) {
+  .shipping-login {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+    grid-template-areas: "shipping-icon" "shipping-login-panel";
+  }
+
+  .shipping-icon .station-icon {
+    display: none;
+  }
+
+  .shipping-icon {
+    font-size: 0.8rem;
+  }
+}

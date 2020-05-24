@@ -1,0 +1,38 @@
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e131f;
+  color: white;
+  font-size: 15px;
+  font-family: Calibri, sans-serif;
+  width: 100vw;
+  height: 10vh;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+.Footer span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Footer #logoMVtech {
+  position: relative;
+  margin: 0 8px;
+  width: 100px;
+}
+
+@media (max-width: 500px) {
+  .Footer {
+    font-size: 10px;
+    height: 15vh;
+  }
+
+  .Footer #logoMVtech {
+    width: 70px;
+  }
+}

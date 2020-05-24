@@ -1,0 +1,117 @@
+.gas-station {
+  background-color: #1b998b;
+  grid-area: gas;
+}
+
+.shipping {
+  background-color: #2e294e;
+  grid-area: shipping;
+}
+
+.gas-station,
+.shipping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: Calibri, sans-serif;
+}
+
+.gas-station:hover {
+  background: linear-gradient(90deg, #1b998b, #29c9b6, #2e294e);
+  background-size: 200% 100%;
+  background-position: 0, 0;
+  animation-name: onmouse-gas;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+.gas-station:not(:hover) {
+  background: linear-gradient(90deg, #1b998b, #29c9b6, #2e294e);
+  background-size: 200% 100%;
+  background-position: 100%, 0;
+  animation-name: outmouse-gas;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+.shipping:hover {
+  background: linear-gradient(90deg, #1b998b, #4f477e, #2e294e);
+  background-size: 200% 100%;
+  background-position: 200%, 0;
+  animation-name: onmouse-shipping;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+.shipping:not(:hover) {
+  background: linear-gradient(90deg, #1b998b, #4f477e, #2e294e);
+  background-size: 200% 100%;
+  background-position: 100%, 0;
+  animation-name: outmouse-shipping;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+.choices {
+  height: 90vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "gas shipping";
+}
+
+/* ANIMATIONS */
+
+@keyframes onmouse-gas {
+  0% {
+    background-position: 0, 0;
+  }
+  100% {
+    background-position: 100%, 0;
+  }
+}
+
+@keyframes outmouse-gas {
+  0% {
+    background-position: 100%, 0;
+  }
+  100% {
+    background-position: 0, 0;
+  }
+}
+
+@keyframes onmouse-shipping {
+  0% {
+    background-position: 100%, 0;
+  }
+  100% {
+    background-position: 0, 0;
+  }
+}
+
+@keyframes outmouse-shipping {
+  0% {
+    background-position: 0, 0;
+  }
+  100% {
+    background-position: 100%, 0;
+  }
+}
+
+@keyframes vanish {
+  0% {
+    opacity: 100%;
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+  100% {
+    display: hidden;
+  }
+}
