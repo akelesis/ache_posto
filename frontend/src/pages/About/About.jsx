@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './styles.css'
+import './About.css'
 // import { Container } from './styles';
 
 function About() {
