@@ -16,6 +16,10 @@ const ShippingLogin = (props) => {
     props.history.push("/register-shipping-station");
   };
 
+  const redirectPanel = () => {
+    props.history.push("/shipping-panel");
+  };
+
   return (
     <div className="shipping-login">
       <div className="shipping-icon">
@@ -53,7 +57,9 @@ const ShippingLogin = (props) => {
           <p className="login-anchor left-align" onClick={redirectPassword}>
             Esqueci a senha!
           </p>
-          <button className="login-btn">ENTRAR</button>
+          <button className="login-btn" onClick={redirectPanel}>
+            ENTRAR
+          </button>
           <p className="login-anchor" onClick={redirectRegister}>
             Cadastrar-se!
           </p>

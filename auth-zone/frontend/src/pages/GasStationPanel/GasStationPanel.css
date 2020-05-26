@@ -1,0 +1,21 @@
+.header-gas {
+  grid-area: header-gas;
+}
+
+.menu-gas {
+  grid-area: menu-gas;
+}
+
+.content-gas {
+  grid-area: content-gas;
+}
+
+.gas-station-panel {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas:
+    "header-gas header-gas"
+    "menu-gas content-gas";
+}
