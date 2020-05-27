@@ -14,7 +14,7 @@ function Routes() {
         <Route path="/" exact component={Choice} />
         <Route path="/gas-station" exact component={GasStationLogin} />
         <Route path="/shipping" exact component={ShippingLogin} />
-        <Route path="/gas-station-panel" exact component={GasStationPanel} />
+        <Route path="/gas-station-panel" component={GasStationPanel} />
         <Route path="/shipping-panel" exact component={ShippingPanel} />
       </Switch>
     </BrowserRouter>

@@ -3,23 +3,22 @@ import React from "react";
 import "./MenuShipping.css";
 
 const MenuShipping = (props) => {
-  const redirectToRoutes = () => {
-    props.history.push("/manage-routes");
+  const teste = () => {
+    console.log({ ...props });
   };
-
   return (
     <div className="menu-shipping">
-      <div className="menu-item active" onClick={redirectToRoutes}>
+      <div className="menu-item">
         <p>Gerenciar Rotas</p>
       </div>
-      <div className="menu-item">
+      <div className="menu-item" onClick={(e) => teste()}>
         <p>Dashboards</p>
       </div>
       <div className="menu-item">
-        <p>Organização de Frota</p>
+        <p>Organizar Frota</p>
       </div>
       <div className="menu-item">
-        <p>Painel de Motoristas</p>
+        <p>Gerenciar Motoristas</p>
       </div>
       <div className="menu-item">
         <p>Gerenciar Consumo</p>

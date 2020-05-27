@@ -1,16 +1,20 @@
 import React from "react";
 
-import "./ShippingPanel.css";
-import HeaderShipping from "./template/HeaderShipping";
 import MenuShipping from "./template/MenuShipping";
+import HeaderShipping from "./template/HeaderShipping";
 import ContentShipping from "./template/ContentShipping";
+import Routes from "../../routes";
+
+import "./ShippingPanel.css";
 
 const ShippingPanel = (props) => {
   return (
     <div className="shipping-panel">
       <HeaderShipping />
       <MenuShipping />
-      <ContentShipping />
+      <ContentShipping>
+        <Routes />
+      </ContentShipping>
     </div>
   );
 };

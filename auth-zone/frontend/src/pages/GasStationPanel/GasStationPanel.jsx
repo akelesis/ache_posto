@@ -1,9 +1,8 @@
 import React from "react";
 
-import MenuGas from "./template/MenuGas";
-import HeaderGas from "./template/HeaderGas";
-import ContentGas from "./template/ContentGas";
-
+import MenuGas from "../../components/MenuGas/MenuGas";
+import HeaderGas from "../../components/HeaderGas/HeaderGas";
+import ContentGas from "../../components/ContentGas/ContentGas";
 import "./GasStationPanel.css";
 
 const GasStationPanel = (props) => {
