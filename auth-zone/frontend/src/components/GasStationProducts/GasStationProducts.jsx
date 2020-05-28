@@ -2,6 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 
 import { changeFlagOptions } from "../../store/actions/flagOptions";
+import { changeCreateProduct } from "../../store/actions/flagCreateProduct";
+
+import ProductsEditModal from "../ProductsEditModal/ProductsEditModal";
 
 import "./GasStationProducts.css";
 
@@ -56,7 +59,14 @@ const GasStationProducts = (props) => {
           />
         ))}
       </div>
-      <div className="product-register">CADASTRAR NOVO PRODUTO</div>
+      {props.flagOptions ? <ProductsEditModal mode="edit" /> : ""}
+      {props.createProduct ? <ProductsEditModal mode="create" /> : ""}
+      <div
+        className="product-register"
+        onClick={(e) => props.FlagCreateProductDispatch(true)}
+      >
+        CADASTRAR NOVO PRODUTO
+      </div>
     </div>
   );
 };
@@ -64,6 +74,7 @@ const GasStationProducts = (props) => {
 const mapStateToProps = (state) => {
   return {
     flagOptions: state.options.flagOptions,
+    createProduct: state.createProduct.flagCreateProduct,
     coordinates: state.coordinates,
   };
 };
@@ -72,8 +83,11 @@ const mapDispatchToProp = (dispatch) => {
   return {
     // Flag that toggles Edit Modal
     FlagOptionsDispatch(newBool) {
-      console.log("Chegou aqui GSP");
       const action = changeFlagOptions(newBool);
+      dispatch(action);
+    },
+    FlagCreateProductDispatch(newBool) {
+      const action = changeCreateProduct(newBool);
       dispatch(action);
     },
   };
