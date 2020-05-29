@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@00&display=swap");
+
+.product-card {
+  width: 400px;
+  height: 134px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to top, #6e6e6e, #e6e6e6);
+  background-size: 300px 500px;
+  background-position: 1% 1%;
+  margin: 50px 10px 10px;
+  font-family: "Roboto", sans-serif;
+  color: #444;
+  box-shadow: 3px 2px 10px #555;
+  transition: background-size 0.3s;
+}
+
+.product-card:hover {
+  cursor: pointer;
+  background: linear-gradient(to top, #6e6e6e, #e6e6e6);
+  background-size: 300px 200px;
+}
+
+.icon-container {
+  width: 90px;
+  height: 90px;
+}
+
+.icon-container .product-icon {
+  width: 88px;
+  color: #1b998b;
+}

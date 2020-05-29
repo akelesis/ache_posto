@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.gas-station-products {
+  width: 50vw;
+  justify-content: center;
+}
+
+.gas-station-products h1 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.gas-station-products hr {
+  margin: 0 200px;
+}
+
+.gs-products-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product-register {
+  margin-top: 50px;
+  height: 50px;
+  font-size: 30px;
+  position: relative;
+  bottom: 0;
+  color: #fff;
+  text-align: center;
+  background-color: #1b998b;
+  border-radius: 5px;
+  box-shadow: 2px 3px 5px #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.product-register:hover {
+  background-color: #217e73;
+  cursor: pointer;
+}

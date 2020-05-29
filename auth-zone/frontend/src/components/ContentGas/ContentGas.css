@@ -1,0 +1,7 @@
+.content-gas {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  overflow-y: auto;
+  background-color: #e2f0f0;
+}

@@ -1,0 +1,21 @@
+.header-shipping {
+  grid-area: header-shipping;
+}
+
+.menu-shipping {
+  grid-area: menu-shipping;
+}
+
+.content-shipping {
+  grid-area: content-shipping;
+}
+
+.shipping-panel {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas:
+    "header-shipping header-shipping"
+    "menu-shipping content-shipping";
+}

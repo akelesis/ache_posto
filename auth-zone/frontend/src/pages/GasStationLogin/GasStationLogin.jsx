@@ -15,6 +15,10 @@ const GasStation = (props) => {
     props.history.push("/register-gas-station");
   };
 
+  const redirectPanel = () => {
+    props.history.push("/gas-station-panel");
+  };
+
   return (
     <div className="gas-login">
       <div className="gas-icon">
@@ -52,7 +56,9 @@ const GasStation = (props) => {
           <p className="login-anchor left-align" onClick={redirectPassword}>
             Esqueci a senha!
           </p>
-          <button className="login-btn">ENTRAR</button>
+          <button className="login-btn" onClick={(e) => redirectPanel()}>
+            ENTRAR
+          </button>
           <p className="login-anchor" onClick={redirectRegister}>
             Cadastrar-se!
           </p>

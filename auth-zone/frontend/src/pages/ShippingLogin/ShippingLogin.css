@@ -71,11 +71,11 @@
 }
 
 .login-input-group input:valid {
-  color: #1b998b;
+  color: #555;
 }
 
 .login-input-group input:invalid {
-  color: orangered;
+  color: #e26872;
 }
 
 .login-input-group label {
