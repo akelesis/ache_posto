@@ -2,11 +2,20 @@ import React from "react";
 import { IconContext } from "react-icons";
 import { connect } from "react-redux";
 import { changeFlagOptions } from "../../store/actions/flagOptions";
+import { selectProduct } from "../../store/actions/product";
 
 import "./ProductCard.css";
 
 const ProductCard = (props) => {
   const prepareOptions = () => {
+    const product = {
+      id: props.id,
+      icon: props.segment,
+      productName: props.productName,
+      productPrice: props.productPrice,
+      productDescription: props.productDescription,
+    };
+    props.selectProductDispatch(product);
     props.FlagOptionsDispatch(true);
   };
 
@@ -31,6 +40,8 @@ const mapStateToProps = (state) => {
   return {
     flagOptions: state.options.flagOptions,
     coordinates: state.coordinates,
+    product: state.product,
+    state: state,
   };
 };
 
@@ -39,6 +50,10 @@ const mapDispatchToProp = (dispatch) => {
     // Flag that toggles Edit Modal
     FlagOptionsDispatch(newBool) {
       const action = changeFlagOptions(newBool);
+      dispatch(action);
+    },
+    selectProductDispatch(product) {
+      const action = selectProduct(product);
       dispatch(action);
     },
   };

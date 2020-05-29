@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 import { changeFlagOptions } from "../../store/actions/flagOptions";
 import { changeCreateProduct } from "../../store/actions/flagCreateProduct";
+import { selectProduct } from "../../store/actions/product";
 
 import ProductsEditModal from "../ProductsEditModal/ProductsEditModal";
 
@@ -30,30 +31,23 @@ const GasStationProducts = (props) => {
     <FaToilet className="product-icon" />,
     <FaWrench className="product-icon" />,
   ];
-  const products = [
-    {
-      id: 1,
-      icon: icons[4],
-      productName: "Farmacia",
-    },
-    { id: 2, icon: icons[0], productName: "Gasolina", productPrice: "4,20" },
-    { id: 3, icon: icons[0], productName: "Etanol", productPrice: "3,80" },
-    {
-      id: 4,
-      icon: icons[1],
-      productName: "Pousada",
-    },
-  ];
+
+  const registerProduct = () => {
+    props.selectProductDispatch({});
+    props.FlagCreateProductDispatch(true);
+  };
 
   return (
     <div className="gas-station-products">
       <h1>Dependencias e Produtos</h1>
       <hr />
       <div className="gs-products-container">
-        {products.map((product) => (
+        {props.products.map((product) => (
           <ProductCard
             key={product.id}
-            icon={product.icon}
+            id={product.id}
+            icon={icons[product.icon]}
+            segment={product.icon}
             productName={product.productName}
             productPrice={product.productPrice}
           />
@@ -61,10 +55,7 @@ const GasStationProducts = (props) => {
       </div>
       {props.flagOptions ? <ProductsEditModal mode="edit" /> : ""}
       {props.createProduct ? <ProductsEditModal mode="create" /> : ""}
-      <div
-        className="product-register"
-        onClick={(e) => props.FlagCreateProductDispatch(true)}
-      >
+      <div className="product-register" onClick={registerProduct}>
         CADASTRAR NOVO PRODUTO
       </div>
     </div>
@@ -75,7 +66,8 @@ const mapStateToProps = (state) => {
   return {
     flagOptions: state.options.flagOptions,
     createProduct: state.createProduct.flagCreateProduct,
-    coordinates: state.coordinates,
+    products: state.products.products,
+    product: state.product,
   };
 };
 
@@ -88,6 +80,10 @@ const mapDispatchToProp = (dispatch) => {
     },
     FlagCreateProductDispatch(newBool) {
       const action = changeCreateProduct(newBool);
+      dispatch(action);
+    },
+    selectProductDispatch(product) {
+      const action = selectProduct(product);
       dispatch(action);
     },
   };

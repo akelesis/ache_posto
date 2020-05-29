@@ -1,12 +1,14 @@
 import { createStore, combineReducers } from "redux";
 import flagOptionsReducer from "./reducers/flagOptionsReducer";
-import coordinatesReducer from "./reducers/coordinatesReducer";
 import flagCreateProductReducer from "./reducers/flagCreateProductReducer";
+import productsReducer from "./reducers/productsReducer";
+import productReducer from "./reducers/productReducer";
 
 const reducers = combineReducers({
   options: flagOptionsReducer,
   createProduct: flagCreateProductReducer,
-  coordinates: coordinatesReducer,
+  products: productsReducer,
+  product: productReducer,
 });
 
 function storeConfig() {
