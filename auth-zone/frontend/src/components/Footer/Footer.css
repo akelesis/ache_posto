@@ -8,6 +8,7 @@
   font-family: Calibri, sans-serif;
   width: 100vw;
   height: 10vh;
+  z-index: 5;
 }
 
 #footer {

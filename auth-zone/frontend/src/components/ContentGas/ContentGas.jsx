@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import "./ContentGas.css";
 import GasStationProducts from "../GasStationProducts/GasStationProducts";
 import GasStationDashboards from "../GasStationDashboards/GasStationDashboards";
+import GasEvaluations from "../GasEvaluations/GasEvaluations";
 
 const ContentGas = (props) => {
   return (
@@ -17,6 +18,24 @@ const ContentGas = (props) => {
         <Route
           key="dashboards"
           path="/gas-station-panel/dashboards"
+          exact
+          component={GasStationDashboards}
+        />
+        <Route
+          key="dashboards"
+          path="/gas-station-panel/evaluations"
+          exact
+          component={GasEvaluations}
+        />
+        <Route
+          key="dashboards"
+          path="/gas-station-panel/promotions"
+          exact
+          component={GasStationDashboards}
+        />
+        <Route
+          key="dashboards"
+          path="gas-station-panel/buy-packages"
           exact
           component={GasStationDashboards}
         />

@@ -1,0 +1,55 @@
+.evaluation-card {
+  width: 415px;
+  height: 134px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  background-color: #bfbfbf;
+  box-shadow: 2px 2px 5px #444;
+}
+
+.evaluation-pic {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-pic {
+  background-color: #ffffff;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.border-pic img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.evaluation-content {
+  margin-left: 10px;
+}
+
+.evaluation-name {
+  color: #4f4f4f;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.evaluation-text {
+  color: #4f4f4f;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.evaluation-star {
+  color: #ddec2e;
+}
