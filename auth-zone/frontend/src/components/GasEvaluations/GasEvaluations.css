@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.gas-evaluations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gas-evaluations h1 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.gas-evaluations hr {
+  width: 400px;
+}
+
+.evaluations-container {
+  width: 70vw;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

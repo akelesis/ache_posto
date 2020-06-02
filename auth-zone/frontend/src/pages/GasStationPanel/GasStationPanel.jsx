@@ -9,7 +9,7 @@ const GasStationPanel = (props) => {
   return (
     <div className="gas-station-panel">
       <HeaderGas />
-      <MenuGas />
+      <MenuGas {...props} />
       <ContentGas />
     </div>
   );

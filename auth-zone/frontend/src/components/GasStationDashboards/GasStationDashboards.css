@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.visit-statistics {
+  width: 60vw;
+  height: 350px;
+  background-color: #dfdfdf;
+  box-shadow: 2px 4px 5px #0006;
+  border-radius: 5px;
+  color: #4281c6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visit-statistics-container {
+  width: 58vw;
+  height: 250px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.dashboard-cards-container {
+  height: 280px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.customers-counter,
+.general-evaluation {
+  box-sizing: border-box;
+  color: #4281c6;
+  padding: 20px;
+  width: 28vw;
+  height: 250px;
+  background-color: #dfdfdf;
+  box-shadow: 2px 4px 5px #0006;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+}
+
+.customers-counter h1,
+.general-evaluation h1,
+.visit-statistics h1 {
+  font-weight: 300;
+}
+
+.general-evaluation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visit-statistics hr,
+.customers-counter hr,
+.general-evaluation hr {
+  min-width: 22vw;
+  border: 1px solid #4281c6;
+  border-top: 0;
+}
+
+.score-case {
+  height: 140px;
+  width: 20vw;
+  background-color: #fff;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.score-case h1 {
+  color: #626262;
+  font-size: 33px;
+}
+
+.score-case span {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.status-good {
+  color: #10862a;
+}
+
+.status-upper-avg {
+  color: #4f8610;
+}
+.status-lower-avg {
+  color: #c9bd16;
+}
+.status-bad {
+  color: #b91818;
+}
+
+.customers-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-promo-dashboard {
+  background-color: #62a9cc;
+  color: #fff;
+  width: 20vw;
+  margin-top: 15px;
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.button-promo-dashboard:hover {
+  cursor: pointer;
+  background-color: #4183a3;
+}

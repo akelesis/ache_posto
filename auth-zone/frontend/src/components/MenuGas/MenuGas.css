@@ -3,7 +3,8 @@
 .menu-gas {
   background-color: #327777;
   border-top: 1px solid #aaa;
-  box-shadow: 2px 3px 10px #555;
+  box-shadow: 2px 0 10px #555;
+  z-index: 5;
 }
 
 .menu-item-gas {
