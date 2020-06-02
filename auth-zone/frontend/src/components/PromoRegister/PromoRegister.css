@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.promo-register {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.promo-register h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.promo-register hr {
+  width: 500px;
+}

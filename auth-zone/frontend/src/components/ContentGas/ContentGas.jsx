@@ -4,6 +4,7 @@ import "./ContentGas.css";
 import GasStationProducts from "../GasStationProducts/GasStationProducts";
 import GasStationDashboards from "../GasStationDashboards/GasStationDashboards";
 import GasEvaluations from "../GasEvaluations/GasEvaluations";
+import PromoRegister from "../PromoRegister/PromoRegister";
 
 const ContentGas = (props) => {
   return (
@@ -31,7 +32,7 @@ const ContentGas = (props) => {
           key="dashboards"
           path="/gas-station-panel/promotions"
           exact
-          component={GasStationDashboards}
+          component={PromoRegister}
         />
         <Route
           key="dashboards"
