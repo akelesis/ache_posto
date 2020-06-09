@@ -1,0 +1,67 @@
+.pack-card {
+  width: 50vw;
+  height: 200px;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to top, #6e6e6e, #e6e6e6);
+  background-size: 300px 500px;
+  background-position: 1% 1%;
+  margin: 50px 10px 10px;
+  font-family: "Roboto", sans-serif;
+  color: #444;
+  box-shadow: 3px 2px 10px #555;
+  transition: background-size 0.3s;
+}
+
+.pack-icon {
+  color: #62a9cc;
+}
+
+.pack-button-case {
+  height: 131px;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #0005;
+  border-radius: 5px;
+}
+
+.buying-btn {
+  background-color: #1b998b;
+  color: #fff;
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.buying-btn:hover {
+  filter: brightness(70%);
+  cursor: pointer;
+}
+
+#paypal-btn {
+  height: 20px;
+  width: 80px;
+  background: no-repeat;
+  background-image: url("../../assets/paypal.png");
+  background-size: contain;
+  background-position: center;
+}
+
+#picpay-btn {
+  height: 20px;
+  background: url("../../assets/picpay.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#pagseguro-btn {
+  height: 20px;
+  background: url("../../assets/pagseguro.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+}

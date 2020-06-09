@@ -1,10 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .menu-gas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   background-color: #327777;
   border-top: 1px solid #aaa;
   box-shadow: 2px 0 10px #555;
   z-index: 5;
+}
+
+.menu-gas .profile-button-container {
+  margin-bottom: 30px;
 }
 
 .menu-item-gas {
@@ -31,4 +39,129 @@
   color: #fff;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
+}
+
+.profile-menu-container {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+.profile-button {
+  background: linear-gradient(to right, #bfbfbf, #606060);
+  background-size: 200%;
+  background-position: 0 0;
+  width: 200px;
+  height: 70px;
+  border-radius: 50px;
+  box-shadow: 0 1px 5px #0005;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+
+.profile-button:hover {
+  background: linear-gradient(to right, #bfbfbf, #606060);
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.profile-button-pic {
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-name {
+  width: 100px;
+  margin-right: 20px;
+  color: #fff;
+}
+
+.profile-menu {
+  box-sizing: border-box;
+  width: 200px;
+  height: 0;
+  bottom: 100px;
+  left: 50px;
+  background-color: #ccc;
+  position: absolute;
+  animation-name: open-options;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  box-shadow: 1px 1px 5px #0005;
+  z-index: 10;
+}
+
+.profile-menu-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+
+.profile-menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.profile-menu-item {
+  width: stretch;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  background-size: 200%;
+  transition: 0.3s;
+  animation-name: open-options-list;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.profile-menu-item:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.profile-icon {
+  margin-right: 10px;
+  color: #555;
+}
+
+.profile-button-pic img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+@keyframes open-options {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100px;
+  }
+}
+
+@keyframes open-options-list {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    height: 50px;
+    opacity: 1;
+  }
 }

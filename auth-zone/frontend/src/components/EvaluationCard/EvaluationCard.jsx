@@ -12,7 +12,7 @@ const EvaluationCard = (props) => {
   const stars = [];
   const countStars = () => {
     for (let i = 0; i < props.client.evaluation; i++) {
-      stars.push(<FaStar className="evaluation-star" />);
+      stars.push(<FaStar className="evaluation-star" key={stars.length} />);
     }
   };
 
