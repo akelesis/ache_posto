@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 import { FaSignOutAlt, FaCogs } from "react-icons/fa";
 
@@ -7,94 +8,52 @@ import "./MenuGas.css";
 import ModalConfig from "../ModalConfig/ModalConfig";
 
 const MenuGas = (props) => {
-  const [products, setProduct] = useState("active");
-  const [dashboards, setDashboards] = useState("");
-  const [evaluations, setEvaluations] = useState("");
-  const [registerPromo, setRegisterPromo] = useState("");
-  const [packBuying, setPackBuying] = useState("");
   const [profileMenu, setProfileMenu] = useState(false);
   const [profileModal, setProfileModal] = useState(false);
-
-  function redirectProducts() {
-    setProduct("active");
-    setDashboards("");
-    setEvaluations("");
-    setRegisterPromo("");
-    setPackBuying("");
-
-    props.history.push("/gas-station-panel");
-  }
-
-  function redirectDashboards() {
-    setProduct("");
-    setDashboards("active");
-    setEvaluations("");
-    setRegisterPromo("");
-    setPackBuying("");
-
-    props.history.push("/gas-station-panel/dashboards");
-  }
-
-  function redirectEvaluations() {
-    setProduct("");
-    setDashboards("");
-    setEvaluations("active");
-    setRegisterPromo("");
-    setPackBuying("");
-
-    props.history.push("/gas-station-panel/evaluations");
-  }
-
-  function redirectPromo() {
-    setProduct("");
-    setDashboards("");
-    setEvaluations("");
-    setRegisterPromo("active");
-    setPackBuying("");
-
-    props.history.push("/gas-station-panel/promotions");
-  }
-
-  function redirectPackBuying() {
-    setProduct("");
-    setDashboards("");
-    setEvaluations("");
-    setRegisterPromo("");
-    setPackBuying("active");
-
-    props.history.push("/gas-station-panel/buy-packages");
-  }
 
   return (
     <div className="menu-gas">
       <div className="main-menu-container">
-        <div className={"menu-item-gas " + products} onClick={redirectProducts}>
-          <p>Dependencias e Produtos</p>
-        </div>
-        <div
-          className={"menu-item-gas " + dashboards}
-          onClick={redirectDashboards}
+        <NavLink
+          exact
+          to="/gas-station-panel"
+          className="menu-item-gas"
+          activeClassName="active"
         >
-          <p>Dashboards</p>
-        </div>
-        <div
-          className={"menu-item-gas " + evaluations}
-          onClick={redirectEvaluations}
+          Dependencias e Produtos
+        </NavLink>
+        <NavLink
+          exact
+          to="/gas-station-panel/dashboards"
+          className="menu-item-gas"
+          activeClassName="active"
         >
-          <p>Lista de Opiniões</p>
-        </div>
-        <div
-          className={"menu-item-gas " + registerPromo}
-          onClick={redirectPromo}
+          Dashboards
+        </NavLink>
+        <NavLink
+          exact
+          to="/gas-station-panel/evaluations"
+          className="menu-item-gas"
+          activeClassName="active"
         >
-          <p>Cadastrar Promoções</p>
-        </div>
-        <div
-          className={"menu-item-gas " + packBuying}
-          onClick={redirectPackBuying}
+          Lista de Opiniões
+        </NavLink>
+        <NavLink
+          exact
+          to="/gas-station-panel/promotions"
+          className="menu-item-gas"
+          activeClassName="active"
         >
-          <p>Compras de Pacotes</p>
-        </div>
+          Cadastrar Promoções
+        </NavLink>
+        <NavLink
+          exact
+          to="/gas-station-panel/buy-packages"
+          className="menu-item-gas"
+          activeClassName="active"
+        >
+          Compras de Pacotes
+        </NavLink>
       </div>
       <div className="profile-menu-container">
         <div className="profile-button-container">
