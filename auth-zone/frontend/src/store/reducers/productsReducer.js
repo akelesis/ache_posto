@@ -9,13 +9,14 @@ const inicialState = {
       icon: 4,
       productName: "Farmacia",
     },
-    { id: 2, icon: 0, productName: "Gasolina", productPrice: "4,20" },
+    { id: 2, icon: 0, productName: "Gasolina Comum", productPrice: "4,20" },
     { id: 3, icon: 0, productName: "Etanol", productPrice: "3,80" },
     {
       id: 4,
       icon: 1,
       productName: "Pousada",
     },
+    { id: 5, icon: 0, productName: "Gasolina Aditivada", productPrice: "4,80" },
   ],
 };
 

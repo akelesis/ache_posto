@@ -5,6 +5,7 @@ import GasStationProducts from "../GasStationProducts/GasStationProducts";
 import GasStationDashboards from "../GasStationDashboards/GasStationDashboards";
 import GasEvaluations from "../GasEvaluations/GasEvaluations";
 import PromoRegister from "../PromoRegister/PromoRegister";
+import PackBuying from "../PackBuying/PackBuying";
 
 const ContentGas = (props) => {
   return (
@@ -36,9 +37,9 @@ const ContentGas = (props) => {
         />
         <Route
           key="dashboards"
-          path="gas-station-panel/buy-packages"
+          path="/gas-station-panel/buy-packages"
           exact
-          component={GasStationDashboards}
+          component={PackBuying}
         />
       </Switch>
     </div>

@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.pack-buying {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pack-buying h3,
+.pack-buying h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #4f4f4f;
+}
+
+.pack-buying hr {
+  width: 500px;
+}
+
+.pack-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  width: 70vw;
+  min-height: 50vh;
+}

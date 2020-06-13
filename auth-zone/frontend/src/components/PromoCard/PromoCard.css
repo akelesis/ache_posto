@@ -1,0 +1,25 @@
+.promo-card {
+  width: 378px;
+  height: 131px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to top, #6e6e6e, #e6e6e6);
+  background-size: 300px 500px;
+  background-position: 1% 1%;
+  margin: 50px 10px 10px;
+  font-family: "Roboto", sans-serif;
+  color: #444;
+  box-shadow: 3px 2px 10px #555;
+  transition: background-size 0.3s;
+}
+
+.promo-card:hover {
+  cursor: pointer;
+  background: linear-gradient(to top, #6e6e6e, #e6e6e6);
+  background-size: 300px 200px;
+}
+
+.promo-icon {
+  color: #62a9cc;
+}

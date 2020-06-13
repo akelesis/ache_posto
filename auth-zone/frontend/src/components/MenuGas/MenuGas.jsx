@@ -1,92 +1,117 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
+
+import { FaSignOutAlt, FaCogs } from "react-icons/fa";
 
 import "./MenuGas.css";
+import ModalConfig from "../ModalConfig/ModalConfig";
 
 const MenuGas = (props) => {
-  const [products, setProduct] = useState("active");
-  const [dashboards, setDashboards] = useState("");
-  const [evaluations, setEvaluations] = useState("");
-  const [registerPromo, setRegisterPromo] = useState("");
-  const [packBuying, setPackBuying] = useState("");
-
-  function redirectProducts() {
-    setProduct("active");
-    setDashboards("");
-    setEvaluations("");
-    setRegisterPromo("");
-    setPackBuying("");
-
-    props.history.push("/gas-station-panel");
-  }
-
-  function redirectDashboards() {
-    setProduct("");
-    setDashboards("active");
-    setEvaluations("");
-    setRegisterPromo("");
-    setPackBuying("");
-
-    props.history.push("/gas-station-panel/dashboards");
-  }
-
-  function redirectEvaluations() {
-    setProduct("");
-    setDashboards("");
-    setEvaluations("active");
-    setRegisterPromo("");
-    setPackBuying("");
-
-    props.history.push("/gas-station-panel/evaluations");
-  }
-
-  function redirectPromo() {
-    setProduct("");
-    setDashboards("");
-    setEvaluations("");
-    setRegisterPromo("active");
-    setPackBuying("");
-
-    props.history.push("/gas-station-panel/promotions");
-  }
-
-  function redirectPackBuying() {
-    setProduct("");
-    setDashboards("");
-    setEvaluations("");
-    setRegisterPromo("");
-    setPackBuying("active");
-
-    props.history.push("gas-station-panel/buy-packages");
-  }
+  const [profileMenu, setProfileMenu] = useState(false);
+  const [profileModal, setProfileModal] = useState(false);
 
   return (
     <div className="menu-gas">
-      <div className={"menu-item-gas " + products} onClick={redirectProducts}>
-        <p>Dependencias e Produtos</p>
+      <div className="main-menu-container">
+        <NavLink
+          exact
+          to="/gas-station-panel"
+          className="menu-item-gas"
+          activeClassName="active"
+        >
+          Dependencias e Produtos
+        </NavLink>
+        <NavLink
+          exact
+          to="/gas-station-panel/dashboards"
+          className="menu-item-gas"
+          activeClassName="active"
+        >
+          Dashboards
+        </NavLink>
+        <NavLink
+          exact
+          to="/gas-station-panel/evaluations"
+          className="menu-item-gas"
+          activeClassName="active"
+        >
+          Lista de Opiniões
+        </NavLink>
+        <NavLink
+          exact
+          to="/gas-station-panel/promotions"
+          className="menu-item-gas"
+          activeClassName="active"
+        >
+          Cadastrar Promoções
+        </NavLink>
+        <NavLink
+          exact
+          to="/gas-station-panel/buy-packages"
+          className="menu-item-gas"
+          activeClassName="active"
+        >
+          Compras de Pacotes
+        </NavLink>
       </div>
-      <div
-        className={"menu-item-gas " + dashboards}
-        onClick={redirectDashboards}
-      >
-        <p>Dashboards</p>
+      <div className="profile-menu-container">
+        <div className="profile-button-container">
+          <div
+            className="profile-button"
+            onClick={(e) => setProfileMenu(!profileMenu)}
+          >
+            <div className="profile-button-pic">
+              <img src={props.profile.picture} alt="" />
+            </div>
+            <div className="profile-name">{props.profile.name}</div>
+          </div>
+        </div>
+        {profileMenu ? (
+          <>
+            <div className="profile-menu">
+              <ul className="profile-menu-list">
+                <li
+                  className="profile-menu-item"
+                  onClick={(e) => {
+                    setProfileModal(true);
+                    setProfileMenu(false);
+                  }}
+                >
+                  <FaCogs className="profile-icon" />
+                  configurações
+                </li>
+                <li
+                  className="profile-menu-item"
+                  onClick={(e) => props.history.push("/gas-station")}
+                >
+                  <FaSignOutAlt className="profile-icon" />
+                  desconectar-se
+                </li>
+              </ul>
+            </div>
+          </>
+        ) : (
+          ""
+        )}
       </div>
-      <div
-        className={"menu-item-gas " + evaluations}
-        onClick={redirectEvaluations}
-      >
-        <p>Lista de Opiniões</p>
-      </div>
-      <div className={"menu-item-gas " + registerPromo} onClick={redirectPromo}>
-        <p>Cadastrar Promoções</p>
-      </div>
-      <div
-        className={"menu-item-gas " + packBuying}
-        onClick={redirectPackBuying}
-      >
-        <p>Compras de Pacotes</p>
-      </div>
+      {profileMenu ? (
+        <div
+          className="profile-menu-overlay"
+          onClick={(e) => setProfileMenu(false)}
+        ></div>
+      ) : (
+        ""
+      )}
+      {profileModal ? <ModalConfig modalOpen={setProfileModal} /> : ""}
     </div>
   );
 };
 
-export default MenuGas;
+const mapStateToProps = (state) => {
+  return {
+    profile: state.profile,
+  };
+};
+
+export default connect(mapStateToProps)(MenuGas);
